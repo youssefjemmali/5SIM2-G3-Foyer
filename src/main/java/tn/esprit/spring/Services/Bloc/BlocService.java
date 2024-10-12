@@ -74,7 +74,7 @@ public class BlocService implements IBlocService {
             Chambre chambre=chambreRepository.findByNumeroChambre(nu);
             chambres.add(chambre);
         }
-        // Keyword (2ème méthode)
+        // Keyword (2ème méthode)kkkk
         //chambres=chambreRepository.findAllByNumeroChambre(numChambre);
         //2 Parent==>Chambre  Child==> Bloc
         for (Chambre cha : chambres) {
