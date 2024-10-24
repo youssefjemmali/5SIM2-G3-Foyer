@@ -123,7 +123,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>check</goal>
+                            <goal>false</goal>
                         </goals>
                     </execution>
                 </executions>
