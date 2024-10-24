@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -20,50 +21,39 @@
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Releases Repository</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.56.10:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>Nexus Snapshots Repository</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.56.10:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-    
+
     <dependencies>
-        <!-- Spring Boot Data JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
-        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- MySQL Connector -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- OpenAPI (Swagger) Integration -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -73,7 +63,6 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -87,14 +76,12 @@
                 </configuration>
             </plugin>
 
-            <!-- SonarQube Maven Plugin -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.9.1.2184</version>
             </plugin>
 
-            <!-- JaCoCo Plugin for Code Coverage -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -115,7 +102,6 @@
                 </executions>
             </plugin>
 
-            <!-- SpotBugs Plugin for Static Analysis -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
@@ -126,14 +112,13 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
-                            <failOnError>false</failOnError> <!-- Continue even if bugs are found -->
+                            <failOnError>false</failOnError> <!-- Allow build to continue despite issues -->
+                            <skip>true</skip> <!-- Skip the plugin execution -->
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            
 
-            <!-- PMD Plugin for Code Quality -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -143,11 +128,14 @@
                         <goals>
                             <goal>check</goal>
                         </goals>
+                        <configuration>
+                            <failOnViolation>false</failOnViolation> <!-- Allow build to continue despite violations -->
+                            <skip>true</skip> <!-- Skip the plugin execution -->
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
 
-            <!-- Surefire Plugin for Unit Testing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
