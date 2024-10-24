@@ -123,11 +123,15 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>false</goal>
+                            <goal>check</goal>
                         </goals>
+                        <configuration>
+                            <failOnError>false</failOnError> <!-- Continue even if bugs are found -->
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
+            
 
             <!-- PMD Plugin for Code Quality -->
             <plugin>
