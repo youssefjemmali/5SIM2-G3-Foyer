@@ -12,4 +12,7 @@ public interface UniversiteRepository extends JpaRepository<Universite, Long> {
     // la chaine de caractère en paramètre et leurs dates de naissance entre deux dates
     // passées en paramètre
     List<Universite> findByFoyerBlocsChambresReservationsEtudiantsNomEtLikeAndFoyerBlocsChambresReservationsEtudiantsDateNaissanceBetween(String nom, LocalDate date1, LocalDate date2);
+
+    List<Universite> findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(TypeUniversite typeUn, String niveauProg);
+
 }

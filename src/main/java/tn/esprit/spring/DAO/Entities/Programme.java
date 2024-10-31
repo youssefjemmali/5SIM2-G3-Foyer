@@ -23,7 +23,7 @@ public class Programme implements Serializable {
 
     String nomProgramme;
     int dureeEnAnnees; // durée du programme en années
-    String niveau; // ex: Licence, Master, Doctorat
+    String niveau; // ex: Licence, Master, Ingénieur, Doctorat
     
     @ManyToOne
     Universite universite;

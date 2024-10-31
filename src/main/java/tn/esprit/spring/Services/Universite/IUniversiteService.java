@@ -10,4 +10,5 @@ public interface IUniversiteService {
     Universite findById(long id);
     void deleteById(long id);
     void delete(Universite u);
+    List<Universite> findUniversitiesByTypeAndProgram(TypeUniversite typeUn, String niveauProg)
 }
