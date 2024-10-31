@@ -21,6 +21,9 @@ public class Universite implements Serializable {
     String nomUniversite;
     String adresse;
 
+    @Enumerated(EnumType.STRING)
+    TypeUniversite typeUniversite;
+
     @OneToOne(cascade = CascadeType.ALL) //ajout, Modif et supprim
     Foyer foyer;
 
