@@ -1,6 +1,7 @@
 package tn.esprit.spring.Services.Universite;
 
 import tn.esprit.spring.DAO.Entities.Universite;
+import tn.esprit.spring.DAO.Entities.TypeUniversite;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ public interface IUniversiteService {
     Universite findById(long id);
     void deleteById(long id);
     void delete(Universite u);
-    List<Universite> findUniversitiesByTypeAndProgram(TypeUniversite typeUn, String niveauProg)
+    List<Universite> findUniversitiesByTypeAndProgram(TypeUniversite typeUn, String niveauProg);
 }

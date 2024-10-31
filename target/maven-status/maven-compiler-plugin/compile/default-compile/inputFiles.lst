@@ -1,4 +1,5 @@
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Repositories/EtudiantRepository.java
+/home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Entities/Programme.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/RestControllers/EtudiantRestController.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Repositories/BlocRepository.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/AOP/FoyerAspect.java
@@ -23,6 +24,7 @@
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/Services/Chambre/IChambreService.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/Services/Reservation/IReservationService.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Entities/Bloc.java
+/home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Entities/TypeUniversite.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/Services/Universite/UniversiteService.java
 /home/vagrant/5SIM2-G3-Foyer/src/main/java/tn/esprit/spring/Services/Bloc/BlocService.java

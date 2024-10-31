@@ -2,6 +2,7 @@ package tn.esprit.spring.DAO.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import tn.esprit.spring.DAO.Entities.Universite;
+import tn.esprit.spring.DAO.Entities.TypeUniversite;
 
 import java.time.LocalDate;
 import java.util.List;

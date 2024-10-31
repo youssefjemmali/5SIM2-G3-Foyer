@@ -6,6 +6,7 @@ import tn.esprit.spring.DAO.Entities.Foyer;
 import tn.esprit.spring.DAO.Entities.Universite;
 import tn.esprit.spring.DAO.Repositories.FoyerRepository;
 import tn.esprit.spring.DAO.Repositories.UniversiteRepository;
+import tn.esprit.spring.DAO.Entities.TypeUniversite;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class UniversiteService implements IUniversiteService {
     // Retourne la liste des Universités répondant au deux critères : Type (Privé/Public) & Programme.niveau (Licence, Master, Ingénieur, Doctorat)
     @Override
     public List<Universite> findUniversitiesByTypeAndProgram(TypeUniversite typeUn, String niveauProg) {
-        return repo.findUniversitiesByTypeAndProgram(type, programmeName, minCapacity);
+        return repo.findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(typeUn, niveauProg);
     }
     
 }

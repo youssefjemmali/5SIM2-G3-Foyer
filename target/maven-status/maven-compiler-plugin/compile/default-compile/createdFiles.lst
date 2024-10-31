@@ -10,6 +10,7 @@ tn/esprit/spring/Services/Reservation/ReservationService.class
 tn/esprit/spring/DAO/Entities/Bloc$BlocBuilder.class
 tn/esprit/spring/Schedular/Schedular.class
 tn/esprit/spring/Services/Bloc/BlocService.class
+tn/esprit/spring/DAO/Entities/Programme$ProgrammeBuilder.class
 tn/esprit/spring/RestControllers/UniversiteRestController.class
 tn/esprit/spring/DAO/Entities/Universite$UniversiteBuilder.class
 tn/esprit/spring/DAO/Entities/Chambre.class
@@ -32,6 +33,8 @@ tn/esprit/spring/Services/Chambre/ChambreService$1.class
 tn/esprit/spring/Services/Etudiant/IEtudiantService.class
 tn/esprit/spring/DAO/Entities/Etudiant.class
 tn/esprit/spring/DAO/Entities/Reservation.class
+tn/esprit/spring/DAO/Entities/TypeUniversite.class
+tn/esprit/spring/DAO/Entities/Programme.class
 tn/esprit/spring/DAO/Entities/Etudiant$EtudiantBuilder.class
 tn/esprit/spring/DAO/Repositories/EtudiantRepository.class
 tn/esprit/spring/DAO/Entities/Foyer.class
