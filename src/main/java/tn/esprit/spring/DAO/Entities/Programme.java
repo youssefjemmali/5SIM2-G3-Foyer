@@ -5,26 +5,26 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "T_UNIVERSITE")
+@Table(name = "T_PROGRAMME")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Universite implements Serializable {
+public class Programme implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idUniversite;
-    String nomUniversite;
-    String adresse;
+    long idProgramme;
 
-    @OneToOne(cascade = CascadeType.ALL) //ajout, Modif et supprim
-    Foyer foyer;
-
-    @OneToMany(mappedBy = "universite", cascade = CascadeType.ALL)
-    List<Programme> programmes;
-
+    String nomProgramme;
+    int dureeEnAnnees; // durée du programme en années
+    String niveau; // ex: Licence, Master, Doctorat
+    
+    @ManyToOne
+    Universite universite;
 }
