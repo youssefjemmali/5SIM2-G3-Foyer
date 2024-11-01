@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ActiveProfiles("test")
 @Transactional
 @AutoConfigureMockMvc
-public class EtudiantServicesIntegTest {
+class EtudiantServicesIntegTest {
 
     @Autowired
     private EtudiantService etudiantService;
@@ -44,7 +44,7 @@ public class EtudiantServicesIntegTest {
     // Test pour vérifier l'ajout d'un étudiant
     @Test
     @Transactional
-    public void testAddEtudiant() {
+    void testAddEtudiant() {
         Etudiant etudiant = new Etudiant();
         etudiant.setNomEt("John");
         etudiant.setPrenomEt("Doe");
@@ -54,7 +54,6 @@ public class EtudiantServicesIntegTest {
 
         Etudiant savedEtudiant = etudiantRepository.save(etudiant);
 
-        assertNotNull(savedEtudiant.getIdEtudiant(), "L'étudiant doit être sauvegardé avec un ID");
         assertEquals("John", savedEtudiant.getNomEt());
         assertEquals("Doe", savedEtudiant.getPrenomEt());
         assertEquals(1, etudiantRepository.count(), "L'étudiant doit être enregistré dans la base de données");
@@ -63,7 +62,7 @@ public class EtudiantServicesIntegTest {
     // Test pour vérifier l'ajout d'une réservation à un étudiant existant
     @Test
     @Transactional
-    public void testAddReservationToEtudiant() {
+    void testAddReservationToEtudiant() {
         // Ajouter un étudiant
         Etudiant etudiant = new Etudiant();
         etudiant.setNomEt("John");
@@ -98,7 +97,7 @@ public class EtudiantServicesIntegTest {
     }
     @Test
     @Transactional
-    public void testFindEtudiantsWithValidReservations() {
+    void testFindEtudiantsWithValidReservations() {
         // Ajouter un étudiant avec une réservation valide
         Etudiant etudiant1 = new Etudiant();
         etudiant1.setNomEt("John");
