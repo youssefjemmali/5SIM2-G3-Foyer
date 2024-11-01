@@ -2,8 +2,8 @@ package tn.esprit.spring.dao.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import tn.esprit.spring.dao.Entities.Foyer;
-import tn.esprit.spring.dao.Entities.TypeChambre;
+import tn.esprit.spring.dao.entities.Foyer;
+import tn.esprit.spring.dao.entities.TypeChambre;
 
 import java.util.List;
 

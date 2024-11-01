@@ -1,4 +1,4 @@
-package tn.esprit.spring.dao.Entities;
+package tn.esprit.spring.dao.entities;
 
 public enum TypeUniversite {
     PUBLIC,

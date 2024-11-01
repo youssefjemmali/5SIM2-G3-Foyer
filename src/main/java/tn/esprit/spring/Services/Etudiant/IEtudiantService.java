@@ -2,7 +2,7 @@ package tn.esprit.spring.Services.Etudiant;
 
 import java.util.List;
 
-import tn.esprit.spring.dao.Entities.Etudiant;
+import tn.esprit.spring.dao.entities.Etudiant;
 
 public interface IEtudiantService {
     Etudiant addOrUpdate(Etudiant e);

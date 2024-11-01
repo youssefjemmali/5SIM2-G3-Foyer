@@ -1,11 +1,11 @@
 package tn.esprit.spring.Services.Foyer;
 
 import lombok.AllArgsConstructor;
-import tn.esprit.spring.dao.Entities.*;
 import tn.esprit.spring.dao.Repositories.BlocRepository;
 import tn.esprit.spring.dao.Repositories.EtudiantRepository;
 import tn.esprit.spring.dao.Repositories.FoyerRepository;
 import tn.esprit.spring.dao.Repositories.UniversiteRepository;
+import tn.esprit.spring.dao.entities.*;
 
 import org.springframework.stereotype.Service;
 

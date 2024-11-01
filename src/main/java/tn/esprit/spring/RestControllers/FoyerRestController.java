@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import tn.esprit.spring.Services.Etudiant.IEtudiantService;
 import tn.esprit.spring.Services.Foyer.IFoyerService;
-import tn.esprit.spring.dao.Entities.Etudiant;
-import tn.esprit.spring.dao.Entities.Foyer;
-import tn.esprit.spring.dao.Entities.Universite;
+import tn.esprit.spring.dao.entities.Etudiant;
+import tn.esprit.spring.dao.entities.Foyer;
+import tn.esprit.spring.dao.entities.Universite;
 
 import java.util.List;
 

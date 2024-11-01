@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import tn.esprit.spring.Services.Bloc.IBlocService;
-import tn.esprit.spring.dao.Entities.Bloc;
+import tn.esprit.spring.dao.entities.Bloc;
 
 import java.util.List;
 

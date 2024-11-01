@@ -5,8 +5,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import tn.esprit.spring.dao.Entities.Bloc;
-import tn.esprit.spring.dao.Entities.TypeChambre;
+import tn.esprit.spring.dao.entities.Bloc;
+import tn.esprit.spring.dao.entities.TypeChambre;
 
 import java.util.List;
 

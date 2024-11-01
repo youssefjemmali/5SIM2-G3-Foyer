@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.*;
 
 import tn.esprit.spring.Services.Chambre.IChambreService;
 import tn.esprit.spring.Services.Etudiant.IEtudiantService;
-import tn.esprit.spring.dao.Entities.Chambre;
-import tn.esprit.spring.dao.Entities.Etudiant;
+import tn.esprit.spring.dao.entities.Chambre;
+import tn.esprit.spring.dao.entities.Etudiant;
 
 import java.util.List;
 

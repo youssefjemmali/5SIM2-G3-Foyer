@@ -3,8 +3,8 @@ package tn.esprit.spring.Services.Reservation;
 import java.time.LocalDate;
 import java.util.List;
 
-import tn.esprit.spring.dao.Entities.Foyer;
-import tn.esprit.spring.dao.Entities.Reservation;
+import tn.esprit.spring.dao.entities.Foyer;
+import tn.esprit.spring.dao.entities.Reservation;
 
 public interface IReservationService {
     Reservation addOrUpdate(Reservation r);

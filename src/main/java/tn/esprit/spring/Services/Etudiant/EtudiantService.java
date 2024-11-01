@@ -1,8 +1,8 @@
 package tn.esprit.spring.Services.Etudiant;
 
 import lombok.AllArgsConstructor;
-import tn.esprit.spring.dao.Entities.Etudiant;
 import tn.esprit.spring.dao.Repositories.EtudiantRepository;
+import tn.esprit.spring.dao.entities.Etudiant;
 
 import org.springframework.stereotype.Service;
 

@@ -2,8 +2,8 @@ package tn.esprit.spring.Services.Chambre;
 
 import java.util.List;
 
-import tn.esprit.spring.dao.Entities.Chambre;
-import tn.esprit.spring.dao.Entities.TypeChambre;
+import tn.esprit.spring.dao.entities.Chambre;
+import tn.esprit.spring.dao.entities.TypeChambre;
 
 public interface IChambreService {
     Chambre addOrUpdate(Chambre c);

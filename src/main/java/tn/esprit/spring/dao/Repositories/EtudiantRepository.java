@@ -3,7 +3,7 @@ package tn.esprit.spring.dao.Repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import tn.esprit.spring.dao.Entities.Etudiant;
+import tn.esprit.spring.dao.entities.Etudiant;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package tn.esprit.spring.Services.Bloc;
 
 import java.util.List;
 
-import tn.esprit.spring.dao.Entities.Bloc;
+import tn.esprit.spring.dao.entities.Bloc;
 
 public interface IBlocService {
     Bloc addOrUpdate(Bloc b);

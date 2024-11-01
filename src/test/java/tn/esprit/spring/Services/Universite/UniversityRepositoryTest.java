@@ -9,10 +9,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 // import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
-import tn.esprit.spring.dao.Entities.Programme;
-import tn.esprit.spring.dao.Entities.TypeUniversite;
-import tn.esprit.spring.dao.Entities.Universite;
 import tn.esprit.spring.dao.Repositories.UniversiteRepository;
+import tn.esprit.spring.dao.entities.Programme;
+import tn.esprit.spring.dao.entities.TypeUniversite;
+import tn.esprit.spring.dao.entities.Universite;
 
 import java.util.ArrayList;
 import java.util.List;

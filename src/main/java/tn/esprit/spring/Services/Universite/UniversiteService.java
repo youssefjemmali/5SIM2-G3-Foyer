@@ -1,9 +1,9 @@
 package tn.esprit.spring.Services.Universite;
 
 import lombok.AllArgsConstructor;
-import tn.esprit.spring.dao.Entities.TypeUniversite;
-import tn.esprit.spring.dao.Entities.Universite;
 import tn.esprit.spring.dao.Repositories.UniversiteRepository;
+import tn.esprit.spring.dao.entities.TypeUniversite;
+import tn.esprit.spring.dao.entities.Universite;
 
 import org.springframework.stereotype.Service;
 

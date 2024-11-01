@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.*;
 
 import tn.esprit.spring.Services.Reservation.IReservationService;
 import tn.esprit.spring.Services.Universite.IUniversiteService;
-import tn.esprit.spring.dao.Entities.Reservation;
-import tn.esprit.spring.dao.Entities.Universite;
+import tn.esprit.spring.dao.entities.Reservation;
+import tn.esprit.spring.dao.entities.Universite;
 
 import java.time.LocalDate;
 import java.util.List;
