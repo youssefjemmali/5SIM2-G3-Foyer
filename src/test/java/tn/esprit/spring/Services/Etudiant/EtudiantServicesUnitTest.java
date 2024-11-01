@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class EtudiantServicesUnitTest {
+class EtudiantServicesUnitTest {
 
     @InjectMocks
     private EtudiantService etudiantService; // Le service à tester
@@ -36,7 +36,7 @@ public class EtudiantServicesUnitTest {
 
     // Test pour vérifier l'ajout d'un étudiant via le service
     @Test
-    public void testAddEtudiant() {
+    void testAddEtudiant() {
         // Préparation des données
         Etudiant etudiant = new Etudiant();
         etudiant.setNomEt("Alice");
@@ -62,7 +62,7 @@ public class EtudiantServicesUnitTest {
 
     // Test pour vérifier la récupération des étudiants avec des réservations valides
     @Test
-    public void testFindEtudiantsWithValidReservations() {
+    void testFindEtudiantsWithValidReservations() {
         // Créer des étudiants avec des réservations
         Etudiant etudiant1 = new Etudiant();
         etudiant1.setNomEt("John");
@@ -92,7 +92,6 @@ public class EtudiantServicesUnitTest {
         etudiant2.getReservations().add(reservation2);
 
         // Préparer les mocks pour le comportement des repositories
-        List<Etudiant> etudiants = List.of(etudiant1, etudiant2);
         when(etudiantRepository.findByReservations_EstValideTrue()).thenReturn(List.of(etudiant1));
 
         // Appel de la méthode du service pour récupérer les étudiants avec des réservations valides
