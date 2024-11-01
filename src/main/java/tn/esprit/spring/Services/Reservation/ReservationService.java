@@ -2,15 +2,16 @@ package tn.esprit.spring.Services.Reservation;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import tn.esprit.spring.dao.Entities.Chambre;
+import tn.esprit.spring.dao.Entities.Etudiant;
+import tn.esprit.spring.dao.Entities.Foyer;
+import tn.esprit.spring.dao.Entities.Reservation;
+import tn.esprit.spring.dao.Repositories.ChambreRepository;
+import tn.esprit.spring.dao.Repositories.EtudiantRepository;
+import tn.esprit.spring.dao.Repositories.FoyerRepository;
+import tn.esprit.spring.dao.Repositories.ReservationRepository;
+
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Chambre;
-import tn.esprit.spring.DAO.Entities.Etudiant;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Reservation;
-import tn.esprit.spring.DAO.Repositories.ChambreRepository;
-import tn.esprit.spring.DAO.Repositories.EtudiantRepository;
-import tn.esprit.spring.DAO.Repositories.FoyerRepository;
-import tn.esprit.spring.DAO.Repositories.ReservationRepository;
 
 import java.time.LocalDate;
 import java.util.List;

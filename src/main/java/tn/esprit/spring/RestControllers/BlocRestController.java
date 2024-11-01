@@ -2,8 +2,9 @@ package tn.esprit.spring.RestControllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.spring.DAO.Entities.Bloc;
+
 import tn.esprit.spring.Services.Bloc.IBlocService;
+import tn.esprit.spring.dao.Entities.Bloc;
 
 import java.util.List;
 

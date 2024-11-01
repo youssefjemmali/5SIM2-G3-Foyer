@@ -3,17 +3,16 @@ package tn.esprit.spring.Services.Universite;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import tn.esprit.spring.DAO.Entities.Universite;
-import tn.esprit.spring.DAO.Entities.TypeUniversite;
-import tn.esprit.spring.DAO.Entities.Programme;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import tn.esprit.spring.DAO.Entities.Universite;
-import tn.esprit.spring.DAO.Repositories.UniversiteRepository;
+
+import tn.esprit.spring.dao.Entities.Programme;
+import tn.esprit.spring.dao.Entities.TypeUniversite;
+import tn.esprit.spring.dao.Entities.Universite;
+import tn.esprit.spring.dao.Repositories.UniversiteRepository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,13 +1,14 @@
 package tn.esprit.spring.Services.Bloc;
 
 import lombok.AllArgsConstructor;
+import tn.esprit.spring.dao.Entities.Bloc;
+import tn.esprit.spring.dao.Entities.Chambre;
+import tn.esprit.spring.dao.Entities.Foyer;
+import tn.esprit.spring.dao.Repositories.BlocRepository;
+import tn.esprit.spring.dao.Repositories.ChambreRepository;
+import tn.esprit.spring.dao.Repositories.FoyerRepository;
+
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Bloc;
-import tn.esprit.spring.DAO.Entities.Chambre;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Repositories.BlocRepository;
-import tn.esprit.spring.DAO.Repositories.ChambreRepository;
-import tn.esprit.spring.DAO.Repositories.FoyerRepository;
 
 import java.util.ArrayList;
 import java.util.List;

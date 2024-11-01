@@ -2,13 +2,14 @@ package tn.esprit.spring.Services.Chambre;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import tn.esprit.spring.dao.Entities.Bloc;
+import tn.esprit.spring.dao.Entities.Chambre;
+import tn.esprit.spring.dao.Entities.Reservation;
+import tn.esprit.spring.dao.Entities.TypeChambre;
+import tn.esprit.spring.dao.Repositories.BlocRepository;
+import tn.esprit.spring.dao.Repositories.ChambreRepository;
+
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Bloc;
-import tn.esprit.spring.DAO.Entities.Chambre;
-import tn.esprit.spring.DAO.Entities.Reservation;
-import tn.esprit.spring.DAO.Entities.TypeChambre;
-import tn.esprit.spring.DAO.Repositories.BlocRepository;
-import tn.esprit.spring.DAO.Repositories.ChambreRepository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

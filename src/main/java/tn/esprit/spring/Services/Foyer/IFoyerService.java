@@ -1,11 +1,11 @@
 package tn.esprit.spring.Services.Foyer;
 
-import tn.esprit.spring.DAO.Entities.Etudiant;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Reservation;
-import tn.esprit.spring.DAO.Entities.Universite;
-
 import java.util.List;
+
+import tn.esprit.spring.dao.Entities.Etudiant;
+import tn.esprit.spring.dao.Entities.Foyer;
+import tn.esprit.spring.dao.Entities.Reservation;
+import tn.esprit.spring.dao.Entities.Universite;
 
 public interface IFoyerService {
     Foyer addOrUpdate(Foyer f);

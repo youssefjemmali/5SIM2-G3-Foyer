@@ -1,10 +1,10 @@
 package tn.esprit.spring.Services.Reservation;
 
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Reservation;
-
 import java.time.LocalDate;
 import java.util.List;
+
+import tn.esprit.spring.dao.Entities.Foyer;
+import tn.esprit.spring.dao.Entities.Reservation;
 
 public interface IReservationService {
     Reservation addOrUpdate(Reservation r);

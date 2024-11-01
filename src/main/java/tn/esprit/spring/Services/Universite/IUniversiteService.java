@@ -1,9 +1,9 @@
 package tn.esprit.spring.Services.Universite;
 
-import tn.esprit.spring.DAO.Entities.Universite;
-import tn.esprit.spring.DAO.Entities.TypeUniversite;
-
 import java.util.List;
+
+import tn.esprit.spring.dao.Entities.TypeUniversite;
+import tn.esprit.spring.dao.Entities.Universite;
 
 public interface IUniversiteService {
     Universite addOrUpdate(Universite u);
