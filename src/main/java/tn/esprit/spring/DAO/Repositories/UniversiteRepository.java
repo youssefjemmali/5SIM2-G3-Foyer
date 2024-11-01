@@ -14,6 +14,6 @@ public interface UniversiteRepository extends JpaRepository<Universite, Long> {
     // passées en paramètre
     List<Universite> findByFoyerBlocsChambresReservationsEtudiantsNomEtLikeAndFoyerBlocsChambresReservationsEtudiantsDateNaissanceBetween(String nom, LocalDate date1, LocalDate date2);
 
-    List<Universite> findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(TypeUniversite typeUn, String niveauProg);
+    List<Universite> findByTypeUniversiteAndProgrammesNiveau(TypeUniversite typeUn, String niveauProg);
 
 }

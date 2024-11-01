@@ -43,7 +43,7 @@ public class UniversiteService implements IUniversiteService {
     // Retourne la liste des Universités répondant au deux critères : Type (Privé/Public) & Programme.niveau (Licence, Master, Ingénieur, Doctorat)
     @Override
     public List<Universite> findUniversitiesByTypeAndProgram(TypeUniversite typeUn, String niveauProg) {
-        return repo.findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(typeUn, niveauProg);
+        return repo.findByTypeUniversiteAndProgrammesNiveau(typeUn, niveauProg);
     }
     
 }

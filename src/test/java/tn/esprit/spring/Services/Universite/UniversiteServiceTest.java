@@ -69,13 +69,13 @@ public class UniversiteServiceTest {
         List<Universite> universities = new ArrayList<>();
         universities.add(universite);
 
-        when(universiteRepository.findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(any(), any()))
+        when(universiteRepository.findByTypeUniversiteAndProgrammesNiveau(any(), any()))
                 .thenReturn(universities);
 
-        List<Universite> result = universiteService.findUniversitiesByTypeAndProgram(TypeUniversite.PRIVE, "Licence");
+        List<Universite> result = universiteService.findUniversitiesByTypeAndProgram(TypeUniversite.PUBLIC, "Licence");
         assertEquals(1, result.size());
         assertEquals(universite, result.get(0));
-        verify(universiteRepository, times(1)).findByTypeUniversiteLiketypeUnAndProgrammeNiveauLikeniveauProg(any(), any());
+        verify(universiteRepository, times(1)).findByTypeUniversiteAndProgrammesNiveau(any(), any());
     }
 
 }
