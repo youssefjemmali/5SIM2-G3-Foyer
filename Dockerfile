@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Construire l'application (exemple pour un projet utilisant Maven)
-RUN ./mvnw package -DskipTests
+RUN mvn package -DskipTests
 
 # Définir le fichier JAR qui sera exécuté
 # Remplacez "app.jar" par le nom du fichier JAR généré par votre application
