@@ -4,7 +4,7 @@ services:
   foyer-app:
     build: .
     ports:
-      - "8080:8080"
+      - "8082:8082"
     volumes:
       - .:/app
     command: ["java", "-jar", "/app/target/Foyer-0.0.1-SNAPSHOT.jar"]
@@ -13,7 +13,7 @@ services:
     image: mysql:5.7
     container_name: mysql_db
     environment:
-      MYSQL_ROOT_PASSWORD: ""  
+      MYSQL_ROOT_PASSWORD: ""
       MYSQL_DATABASE: foyer
     ports:
       - "3306:3306"
