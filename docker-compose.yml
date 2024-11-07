@@ -3,7 +3,7 @@ version: '2'
 
 services:
   spring_app:
-    image: youssefjemmali/mon_projet:v1.0
+    image: youssefjemmali/youssefjemmali-5sim2-g3-foyer:v1.0
     container_name: spring_app
     depends_on:
       - mysql_db
