@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>tn.esprit.spring</groupId>
-    <artifactId>Foyer</artifactId>
+    <artifactId>5SIM2-G3-Foyer<</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Foyer</name>
     <description>Foyer</description>
@@ -83,7 +83,6 @@
         </snapshotRepository>
 	</distributionManagement>
     <build>
-	<finalName>5SIM2-G3-Foyer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
