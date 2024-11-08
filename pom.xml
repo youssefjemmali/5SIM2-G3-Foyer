@@ -83,6 +83,7 @@
         </snapshotRepository>
 	</distributionManagement>
     <build>
+	<finalName>5SIM2-G3-Foyer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
