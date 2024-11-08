@@ -1,4 +1,4 @@
-version: "3.8"
+
 services:
   mysqlDb:
     image: mysql:5.7
