@@ -15,7 +15,7 @@ services:
   app-foyer:
     depends_on:
       - mysqlDb
-    image: aymenzouaoui/zouaouiaymen5sim2:0.0.1
+    image: zouaouiaymen5sim2:0.0.1
     restart: on-failure
     ports:
       - "8085:8085"
