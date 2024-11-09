@@ -32,7 +32,7 @@ public class UniversiteServiceTest {
     private List<Programme> listProgs;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
         programme1 = new Programme(1L, "Développement des Systèmes d'Information", 3, "Licence", null);
         programme2 = new Programme(2L, "Systèmes Embarqué", 3, "Licence", null);
@@ -46,7 +46,7 @@ public class UniversiteServiceTest {
     }
 
     @Test
-    public void testAddOrUpdate() {
+    void testAddOrUpdate() {
         when(universiteRepository.save(universite)).thenReturn(universite);
 
         Universite result = universiteService.addOrUpdate(universite);
@@ -55,7 +55,7 @@ public class UniversiteServiceTest {
     }
 
     @Test
-    public void testFindById() {
+    void testFindById() {
         when(universiteRepository.findById(1L)).thenReturn(Optional.of(universite));
 
         Universite result = universiteService.findById(1L);
@@ -64,7 +64,7 @@ public class UniversiteServiceTest {
     }
 
     @Test
-    public void testFindUniversitiesByTypeAndProgram() {
+    void testFindUniversitiesByTypeAndProgram() {
         List<Universite> universities = new ArrayList<>();
         universities.add(universite);
 

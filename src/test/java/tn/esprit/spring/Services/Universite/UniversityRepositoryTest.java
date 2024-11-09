@@ -54,7 +54,7 @@ class UniversiteRepositoryTest {
 
         Universite savedUniversite = universiteRepository.save(universite);
         assertThat(savedUniversite).isNotNull();
-        assertThat(savedUniversite.getIdUniversite()).isGreaterThan(0); // L'ID doit être généré
+        assertThat(savedUniversite.getIdUniversite()).isPositive(); // L'ID doit être généré
     }
 
     @Test
