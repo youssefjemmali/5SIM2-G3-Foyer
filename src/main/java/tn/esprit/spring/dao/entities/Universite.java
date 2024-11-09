@@ -29,6 +29,6 @@ public class Universite implements Serializable {
     Foyer foyer;
 
     @OneToMany(mappedBy = "universite", cascade = CascadeType.ALL)
-    List<Programme> programmes;
+    private List<Programme> programmes;
 
 }
