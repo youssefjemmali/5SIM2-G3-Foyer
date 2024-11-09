@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Etudiant;
+package tn.esprit.spring.services.etudiant;
 
 import lombok.AllArgsConstructor;
 import tn.esprit.spring.dao.Repositories.EtudiantRepository;

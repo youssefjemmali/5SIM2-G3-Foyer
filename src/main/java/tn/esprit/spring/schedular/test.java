@@ -1,4 +1,4 @@
-package tn.esprit.spring.Schedular;
+package tn.esprit.spring.schedular;
 
 
 import lombok.AllArgsConstructor;

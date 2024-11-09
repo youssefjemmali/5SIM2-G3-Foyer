@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Universite;
+package tn.esprit.spring.services.universite;
 
 import java.util.List;
 

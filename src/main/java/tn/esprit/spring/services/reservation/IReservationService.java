@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Reservation;
+package tn.esprit.spring.services.reservation;
 
 import java.time.LocalDate;
 import java.util.List;

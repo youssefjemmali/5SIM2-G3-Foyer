@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Foyer;
+package tn.esprit.spring.services.foyer;
 
 import java.util.List;
 

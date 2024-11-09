@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Etudiant;
+package tn.esprit.spring.services.etudiant;
 
 import java.util.List;
 

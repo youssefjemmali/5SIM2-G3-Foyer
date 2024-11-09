@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Foyer;
+package tn.esprit.spring.services.foyer;
 
 import lombok.AllArgsConstructor;
 import tn.esprit.spring.dao.Repositories.BlocRepository;

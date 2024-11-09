@@ -1,4 +1,4 @@
-package tn.esprit.spring.Services.Chambre;
+package tn.esprit.spring.services.chambre;
 
 import java.util.List;
 

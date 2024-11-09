@@ -1,12 +1,12 @@
-package tn.esprit.spring.RestControllers;
+package tn.esprit.spring.restcontrollers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import tn.esprit.spring.Services.Chambre.IChambreService;
-import tn.esprit.spring.Services.Etudiant.IEtudiantService;
 import tn.esprit.spring.dao.entities.Chambre;
 import tn.esprit.spring.dao.entities.Etudiant;
+import tn.esprit.spring.services.chambre.IChambreService;
+import tn.esprit.spring.services.etudiant.IEtudiantService;
 
 import java.util.List;
 
