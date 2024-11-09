@@ -31,5 +31,23 @@ services:
     stdin_open: true
     tty: true
 
+  nagios:
+    image: jasonrivers/nagios:latest
+    restart: always
+    ports:
+      - "8081:80"  # Changez le port de 8080 à 8081
+    environment:
+      - NAGIOS_PASSWORD=admin  # Mot de passe pour l'interface web de Nagios
+    volumes:
+      - nagios_data:/opt/nagios
+    networks:
+      - default
+
 volumes:
   db:
+  nagios_data:
+
+networks:
+  default:
+    external:
+      name: nat
