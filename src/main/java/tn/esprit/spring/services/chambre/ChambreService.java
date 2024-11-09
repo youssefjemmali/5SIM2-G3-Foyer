@@ -119,9 +119,9 @@ public class ChambreService implements IChambreService {
     @Override
     public void pourcentageChambreParTypeChambre() {
         long totalChambre = repo.count();
-        double pSimple = (repo.countChambreByTypeC(TypeChambre.SIMPLE) * 100) / totalChambre;
-        double pDouble = (repo.countChambreByTypeC(TypeChambre.DOUBLE) * 100) / totalChambre;
-        double pTriple = (repo.countChambreByTypeC(TypeChambre.TRIPLE) * 100) / totalChambre;
+        double pSimple = (repo.countChambreByTypeC(TypeChambre.SIMPLE) * 100) / (double) totalChambre;
+        double pDouble = (repo.countChambreByTypeC(TypeChambre.DOUBLE) * 100) / (double) totalChambre;
+        double pTriple = (repo.countChambreByTypeC(TypeChambre.TRIPLE) * 100) / (double) totalChambre;
         log.info("Nombre total des chambre: " + totalChambre);
         log.info("Le pourcentage des chambres pour le type SIMPLE est égale à " + pSimple);
         log.info("Le pourcentage des chambres pour le type DOUBLE est égale à " + pDouble);
