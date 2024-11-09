@@ -35,7 +35,7 @@ services:
     image: jasonrivers/nagios:latest
     restart: always
     ports:
-      - "8081:80"  # Changez le port de 8080 à 8081
+      - "8086:80"  # Changez le port de 8080 à 8081
     environment:
       - NAGIOS_PASSWORD=admin  # Mot de passe pour l'interface web de Nagios
     volumes:
