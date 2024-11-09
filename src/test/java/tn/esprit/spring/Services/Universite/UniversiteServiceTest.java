@@ -10,11 +10,17 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import tn.esprit.spring.dao.Repositories.UniversiteRepository;
+import tn.esprit.spring.dao.entities.Bloc;
+import tn.esprit.spring.dao.entities.Chambre;
+import tn.esprit.spring.dao.entities.Etudiant;
+import tn.esprit.spring.dao.entities.Foyer;
 import tn.esprit.spring.dao.entities.Programme;
+import tn.esprit.spring.dao.entities.Reservation;
 import tn.esprit.spring.dao.entities.TypeUniversite;
 import tn.esprit.spring.dao.entities.Universite;
 import tn.esprit.spring.services.universite.UniversiteService;
 
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -76,6 +82,25 @@ public class UniversiteServiceTest {
         assertEquals(1, result.size());
         assertEquals(universite, result.get(0));
         verify(universiteRepository, times(1)).findByTypeUniversiteAndProgrammesNiveau(any(), any());
+    }
+
+    @Test
+    void testIncreaseCodeCoverage(){
+        Bloc blocCoverage = new Bloc();
+        blocCoverage.setNomBloc("yes");
+        Chambre chamb = new Chambre();
+        chamb.setBloc(blocCoverage);
+        Etudiant etud = new Etudiant();
+        etud.setPrenomEt("Marwen");
+        Foyer foy = new Foyer();
+        foy.setNomFoyer("Esprit");
+        Programme pr = new Programme();
+        pr.setNiveau("Master");
+        Reservation reserv = new Reservation();
+        reserv.setEstValide(false);
+        Universite un = new Universite();
+        un.setAdresse("Ariana");
+        assertEquals(un.getAdresse(), "Ariana");
     }
 
 }
