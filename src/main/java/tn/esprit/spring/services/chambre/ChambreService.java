@@ -11,6 +11,8 @@ import tn.esprit.spring.dao.entities.TypeChambre;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.persistence.EntityNotFoundException;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +36,7 @@ public class ChambreService implements IChambreService {
 
     @Override
     public Chambre findById(long id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElseThrow(() -> new EntityNotFoundException("Chambre not found with id " + id));
     }
 
     @Override

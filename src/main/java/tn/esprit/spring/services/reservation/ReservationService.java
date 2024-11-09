@@ -13,6 +13,8 @@ import tn.esprit.spring.dao.entities.Reservation;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.persistence.EntityNotFoundException;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class ReservationService implements IReservationService {
 
     @Override
     public Reservation findById(String id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElseThrow(() -> new EntityNotFoundException("Reservation not found with id " + id));
     }
 
     @Override
@@ -129,8 +131,8 @@ public class ReservationService implements IReservationService {
 
     @Override
     public void affectReservationAChambre(String idRes, long idChambre) {
-        Reservation r = repo.findById(idRes).get();
-        Chambre c = chambreRepository.findById(idChambre).get();
+        Reservation r = repo.findById(idRes).orElseThrow(() -> new EntityNotFoundException("Reservation not found with id " + idRes));
+        Chambre c = chambreRepository.findById(idChambre).orElseThrow(() -> new EntityNotFoundException("chambreRepository not found with id " + idChambre));
         // Parent: Chambre , Child: Reservation
         // On affecte le child au parent
         c.getReservations().add(r);

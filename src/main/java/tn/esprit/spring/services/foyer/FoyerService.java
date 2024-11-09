@@ -9,6 +9,8 @@ import tn.esprit.spring.dao.entities.*;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.persistence.EntityNotFoundException;
+
 import java.util.List;
 
 @Service
@@ -30,7 +32,7 @@ public class FoyerService implements IFoyerService {
 
     @Override
     public Foyer findById(long id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElseThrow(() -> new EntityNotFoundException("Foyer not found with id " + id));
     }
 
     @Override
@@ -54,7 +56,7 @@ public class FoyerService implements IFoyerService {
 
     @Override
     public Universite desaffecterFoyerAUniversite(long idUniversite) {
-        Universite u = universiteRepository.findById(idUniversite).get(); // Parent
+        Universite u = universiteRepository.findById(idUniversite).orElseThrow(() -> new EntityNotFoundException("Universite not found with id " + idUniversite)); // Parent
         u.setFoyer(null);
         return universiteRepository.save(u);
     }
@@ -65,7 +67,7 @@ public class FoyerService implements IFoyerService {
         List<Bloc> blocs = foyer.getBlocs();
         // Foyer est le child et universite est parent
         Foyer f = repo.save(foyer);
-        Universite u = universiteRepository.findById(idUniversite).get();
+        Universite u = universiteRepository.findById(idUniversite).orElseThrow(() -> new EntityNotFoundException("Universite not found with id " + idUniversite));
         // Foyer est le child et bloc est le parent
         //On affecte le child au parent
         for (Bloc bloc : blocs) {
