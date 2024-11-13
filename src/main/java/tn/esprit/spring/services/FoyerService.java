@@ -1,5 +1,6 @@
 package tn.esprit.spring.services;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.spring.dao.entities.*;
@@ -28,7 +29,7 @@ public class FoyerService implements IFoyerService {
 
     @Override
     public Foyer findById(long id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(null);
     }
 
     @Override
@@ -52,27 +53,38 @@ public class FoyerService implements IFoyerService {
 
     @Override
     public Universite desaffecterFoyerAUniversite(long idUniversite) {
-        Universite u = universiteRepository.findById(idUniversite).get(); // Parent
+        Universite u = universiteRepository.findById(idUniversite)
+                .orElseThrow(() -> new EntityNotFoundException("Université avec l'ID " + idUniversite + " introuvable"));
         u.setFoyer(null);
         return universiteRepository.save(u);
     }
 
+
     @Override
     public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite) {
-        // Récuperer la liste des blocs avant de faire l'ajout
+        // Récupérer la liste des blocs avant de faire l'ajout
         List<Bloc> blocs = foyer.getBlocs();
-        // Foyer est le child et universite est parent
+
+        // Enregistrer le foyer d'abord
         Foyer f = repo.save(foyer);
-        Universite u = universiteRepository.findById(idUniversite).get();
-        // Foyer est le child et bloc est le parent
-        //On affecte le child au parent
+
+        // Rechercher l'université par son identifiant
+        Universite u = universiteRepository.findById(idUniversite)
+                .orElseThrow(() -> new EntityNotFoundException("Université avec l'ID " + idUniversite + " introuvable"));
+
+        // Associer chaque bloc au foyer
         for (Bloc bloc : blocs) {
-            bloc.setFoyer(foyer);
+            bloc.setFoyer(f);
             blocRepository.save(bloc);
         }
+
+        // Associer le foyer à l'université
         u.setFoyer(f);
-        return universiteRepository.save(u).getFoyer();
+        universiteRepository.save(u);
+
+        return f;
     }
+
 
     @Override
     public Foyer ajoutFoyerEtBlocs(Foyer foyer) {
