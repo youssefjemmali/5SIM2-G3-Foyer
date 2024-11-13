@@ -23,7 +23,7 @@ public class Foyer implements Serializable {
     String nomFoyer;
     long capaciteFoyer;
     @OneToOne(mappedBy = "foyer")
-    Universite universite;
+    tn.esprit.spring.dao.entities.Universite universite;
     @OneToMany(mappedBy = "foyer")
-    private List<Bloc> blocs= new ArrayList<>();
+    private List<tn.esprit.spring.dao.entities.Bloc> blocs= new ArrayList<>();
 }

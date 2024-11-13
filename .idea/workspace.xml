@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a2fa53f-9022-4f91-838c-4253b3b39c78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/jenkins/zouaouiaymen-5sim2 g3" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/zouaouiaymen-5sim2 g3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Bloc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Bloc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Chambre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Chambre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Foyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/TypeChambre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/TypeChambre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Entities/Universite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/entities/Universite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/BlocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/BlocRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/ChambreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/ChambreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/EtudiantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/EtudiantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/FoyerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/FoyerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/DAO/Repositories/UniversiteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/dao/repositories/UniversiteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/BlocRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/BlocRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/ChambreRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/ChambreRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/EtudiantRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/EtudiantRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/FoyerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/FoyerRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/ReservationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/ReservationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/RestControllers/UniversiteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/restControllers/UniversiteRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/Schedular/Schedular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/schedular/Schedular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/Schedular/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/schedular/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Bloc/BlocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/bloc/BlocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Bloc/IBlocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/bloc/IBlocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Chambre/ChambreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/chambre/ChambreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Chambre/IChambreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/chambre/IChambreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Etudiant/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/etudiant/EtudiantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Etudiant/IEtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/etudiant/IEtudiantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Reservation/IReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/reservation/IReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Reservation/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/reservation/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Universite/IUniversiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/universite/IUniversiteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/Universite/UniversiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/services/universite/UniversiteService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2oo8QiNGQatqCLkrq8Ct9pSikkq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "ZouaouiAymen-5SIM2-G3",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="FoyerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Foyer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.spring.FoyerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a2fa53f-9022-4f91-838c-4253b3b39c78" name="Changes" comment="" />
+      <created>1731524555382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731524555382</updated>
+      <workItem from="1731524556969" duration="511000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -93,13 +93,13 @@ pipeline {
             -Dsonar.login=admin \
             -Dsonar.password=Aymenzouaoui11* \
             -Dsonar.exclusions=src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,
-            src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,
-            src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,
-            src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,
-
+            src/main/java/tn/esprit/spring/DAO/Entities/Etudiant.java,
+            src/main/java/tn/esprit/spring/DAO/RestControllers/*RestController.java,
+            src/main/java/tn/esprit/spring/DAO/services/test/*
         """
     }
 }
+
 
 
         stage('Deploy to Nexus') {
