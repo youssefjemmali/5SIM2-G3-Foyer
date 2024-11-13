@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   mysqlDb:
@@ -10,6 +11,11 @@ services:
       - "3306:3306"
     volumes:
       - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   app-foyer:
     depends_on:
@@ -36,6 +42,12 @@ services:
       - "8081:8081"
     volumes:
       - nexus-data:/nexus-data
+    # healthcheck optionnel pour Nexus si nécessaire
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8081 || exit 1"]
+      interval: 1m
+      timeout: 10s
+      retries: 5
 
   sonarqube:
     image: sonarqube:latest
@@ -48,6 +60,11 @@ services:
       SONAR_JDBC_PASSWORD: rootpassword
     depends_on:
       - mysqlDb
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9000 || exit 1"]
+      interval: 1m
+      timeout: 10s
+      retries: 5
 
   prometheus:
     image: prom/prometheus
@@ -56,6 +73,9 @@ services:
       - "9090:9090"
     volumes:
       - prometheus-data:/prometheus
+    # Si un fichier de configuration prometheus.yml est nécessaire
+    # volumes:
+    #   - ./prometheus.yml:/etc/prometheus/prometheus.yml
 
   grafana:
     image: grafana/grafana
@@ -64,6 +84,12 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
+    # healthcheck optionnel pour Grafana
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000 || exit 1"]
+      interval: 1m
+      timeout: 10s
+      retries: 5
 
 volumes:
   db:
