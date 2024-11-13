@@ -13,6 +13,30 @@ pipeline {
             }
         }
 
+        stage('Start SonarQube and Nexus') {
+            steps {
+                echo 'Starting SonarQube and Nexus containers'
+                script {
+                    // Démarrer SonarQube et Nexus via Docker Compose
+                    sh 'docker start sonarqube nexus'
+                    
+                    // Vérifier que les services sont bien lancés
+                    waitUntil {
+                        try {
+                            // Vérifier si SonarQube est prêt
+                            sh 'curl -s http://localhost:9000 | grep "SonarQube"'
+                            // Vérifier si Nexus est prêt
+                            sh 'curl -s http://localhost:8081 | grep "Nexus"'
+                            return true
+                        } catch (Exception e) {
+                            echo "Waiting for SonarQube and Nexus to be ready"
+                            return false
+                        }
+                    }
+                }
+            }
+        }
+
         stage('Maven Clean Compile') {
             steps {
                 echo 'Running Maven Clean and Compile'
@@ -27,7 +51,7 @@ pipeline {
             }
         }
 
-        stage('Build Package') {
+        stage('Maven Package') {
             steps {
                 echo 'Running Maven Package'
                 sh 'mvn package'
@@ -63,7 +87,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 echo 'Running SonarQube Analysis'
-                sh 'mvn sonar:sonar -Dsonar.host.url=http://192.168.56.10:9000 -Dsonar.login=admin -Dsonar.password=Aymenzouaoui11*'
+                sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=Aymenzouaoui11*'
             }
         }
 
@@ -93,21 +117,53 @@ pipeline {
             }
         }
 
-        stage('Deploy with Docker Compose ') {
-              steps {
-                 script {
-                         echo 'Deploying with Docker Compose'
-                            sh 'docker-compose up -d'
-                         }
-                     }
-             }
-
-
+        stage('Deploy with Docker Compose') {
+            steps {
+                script {
+                    echo 'Deploying with Docker Compose'
+                    sh 'docker-compose up -d'
+                }
+            }
+        }
     }
 
     post {
+        success {
+            echo 'Sending success email...'
+            mail to: 'aymenzouaoui97@gmail.com',
+                 subject: "Pipeline Jenkins - Success - Build #${BUILD_NUMBER}",
+                 body: """<html>
+                            <body>
+                                <h2 style="color: #4CAF50;">aymenzouaoui 5SIM2-G3 Build ${BUILD_NUMBER}</h2>
+                                <div style="border: 2px solid #4CAF50; padding: 10px;">
+                                    <h3 style="background-color: #4CAF50; color: white; padding: 10px; text-align: center;">
+                                        Pipeline Status: SUCCESS
+                                    </h3>
+                                    <p>Check the <a href="${BUILD_URL}console">console output</a> for more details.</p>
+                                </div>
+                            </body>
+                          </html>""",
+                 mimeType: 'text/html'
+        }
+        failure {
+            echo 'Sending failure email...'
+            mail to: 'aymenzouaoui97@gmail.com',
+                 subject: "Pipeline Jenkins - Failure - Build #${BUILD_NUMBER}",
+                 body: """<html>
+                            <body>
+                                <h2 style="color: #D32F2F;">zouaouiaymen5SIM2-G3 Build ${BUILD_NUMBER}</h2>
+                                <div style="border: 2px solid #D32F2F; padding: 10px;">
+                                    <h3 style="background-color: #D32F2F; color: white; padding: 10px; text-align: center;">
+                                        Pipeline Status: FAILURE
+                                    </h3>
+                                    <p>Check the <a href="${BUILD_URL}console">console output</a> for more details.</p>
+                                </div>
+                            </body>
+                          </html>""",
+                 mimeType: 'text/html'
+        }
         always {
-            echo 'Pipeline Finished'
+            echo 'Pipeline completed.'
         }
     }
 }
