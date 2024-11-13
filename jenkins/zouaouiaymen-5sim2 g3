@@ -84,7 +84,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+       stage('SonarQube Analysis') {
     steps {
         echo 'Running SonarQube Analysis'
         sh """
@@ -92,13 +92,11 @@ pipeline {
             -Dsonar.host.url=http://localhost:9000 \
             -Dsonar.login=admin \
             -Dsonar.password=Aymenzouaoui11* \
-            -Dsonar.exclusions=src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,
-            src/main/java/tn/esprit/spring/DAO/Entities/Etudiant.java,
-            src/main/java/tn/esprit/spring/DAO/RestControllers/*RestController.java,
-            src/main/java/tn/esprit/spring/DAO/services/test/*
+            -Dsonar.exclusions="src/main/java/tn/esprit/spring/DAO/Entities/Foyer.java,src/main/java/tn/esprit/spring/DAO/Entities/Etudiant.java,src/main/java/tn/esprit/spring/restControllers/*RestController.java,src/main/java/tn/esprit/spring/restControllers/FoyerRestController.java,src/main/java/tn/esprit/spring/services/*"
         """
     }
 }
+
 
 
 
