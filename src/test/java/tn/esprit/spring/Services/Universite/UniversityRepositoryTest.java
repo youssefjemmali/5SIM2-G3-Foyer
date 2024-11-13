@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-// import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.dao.Repositories.UniversiteRepository;
@@ -17,7 +17,7 @@ import tn.esprit.spring.dao.entities.Universite;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-// @ActiveProfiles("test")  // Si commené utilise MySQL sinon H2
+@ActiveProfiles("test")  // Si commené utilise MySQL sinon H2
 @DataJpaTest // Charge uniquement le contexte de persistence
 @Transactional // Rétablit l'état après chaque test
 
