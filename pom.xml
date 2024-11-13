@@ -54,7 +54,14 @@
             <name>Nexus Repository</name>
             <url>http://192.168.56.10:8081/repository/maven-releases/</url>
         </repository>
+         <!-- Dépôt pour les snapshots -->
+         <snapshotRepository>
+            <id>snapshotRepo</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.56.10:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
+
     <build>
         <plugins>
 
