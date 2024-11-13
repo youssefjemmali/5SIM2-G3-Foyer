@@ -1,4 +1,4 @@
-package tn.esprit.spring.servicestest.Reservation;
+package tn.esprit.spring.services.Reservation;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

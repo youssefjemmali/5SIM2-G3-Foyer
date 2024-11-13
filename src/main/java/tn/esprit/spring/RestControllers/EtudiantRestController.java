@@ -3,7 +3,7 @@ package tn.esprit.spring.restcontrollers;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.dao.entities.Etudiant;
-import tn.esprit.spring.servicestest.Etudiant.IEtudiantService;
+import tn.esprit.spring.services.Etudiant.IEtudiantService;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.dao.entities.Chambre;
 import tn.esprit.spring.dao.entities.TypeChambre;
-import tn.esprit.spring.servicestest.Chambre.IChambreService;
+import tn.esprit.spring.services.Chambre.IChambreService;
 
 import java.util.List;
 

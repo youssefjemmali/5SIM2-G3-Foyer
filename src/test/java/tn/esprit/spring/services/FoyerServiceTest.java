@@ -1,4 +1,4 @@
-package tn.esprit.spring.servicestest;
+package tn.esprit.spring.services;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,8 +16,6 @@ import tn.esprit.spring.dao.repositories.UniversiteRepository;
 
 
 import java.util.Optional;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;

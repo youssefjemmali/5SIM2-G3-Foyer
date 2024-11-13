@@ -3,7 +3,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.dao.entities.Foyer;
 import tn.esprit.spring.dao.entities.Universite;
-import tn.esprit.spring.servicestest.IFoyerService;
+import tn.esprit.spring.services.IFoyerService;
 
 import java.util.List;
 

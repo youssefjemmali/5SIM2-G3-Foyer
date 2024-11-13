@@ -1,4 +1,4 @@
-package tn.esprit.spring.servicestest;
+package tn.esprit.spring.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -15,16 +15,16 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class FoyerAspect {
     //Méthode: Advice
-    @Before("execution(* tn.esprit.spring.servicestest..*.*(..))")
+    @Before("execution(* tn.esprit.spring.services..*.*(..))")
     public void method(JoinPoint jp){
         log.info("hello "+jp.getSignature().getName());
     }
-    @After("execution(* tn.esprit.spring.servicestest..*.*(..))")
+    @After("execution(* tn.esprit.spring.services..*.*(..))")
     public void methoAfter(JoinPoint jp){
         log.info("Bye bye "+jp.getSignature().getName());
     }
 
-    @Around("execution(* tn.esprit.spring.servicestest..*.*(..))")
+    @Around("execution(* tn.esprit.spring.services..*.*(..))")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable
     {
         long start = System.currentTimeMillis();

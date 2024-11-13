@@ -1,4 +1,4 @@
-package tn.esprit.spring.servicestest.Bloc;
+package tn.esprit.spring.services.Bloc;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
