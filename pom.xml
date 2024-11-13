@@ -47,16 +47,16 @@
         </dependency>
     </dependencies>
          <distributionManagement>
-	<repository>
-		<id>deploymentRepo</id>
-		<name>releases</name>
-		<url>http://10.0.0.10:8081/repository/maven-releases/</url>
-	</repository>
-	<snapshotRepository>
-                <id>deploymentRepo</id>
-                <name>snapshots</name>
-                <url>http://10.0.0.10:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
+	 <repository>
+    <id>deploymentRepo</id> <!-- Doit correspondre à l'ID dans settings.xml -->
+    <url>http://10.0.0.10:8081/repository/maven-releases/</url>
+  </repository>
+  
+  <!-- Dépôt pour les snapshots -->
+  <snapshotRepository>
+    <id>deploymentRepo</id> <!-- Doit correspondre à l'ID dans settings.xml -->
+    <url>http://10.0.0.10:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
 	</distributionManagement>
     <build>
         <plugins>
