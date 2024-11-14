@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class FoyerServiceTest {
+ class FoyerServiceTest {
 
     @Mock
     private FoyerRepository foyerRepository;
@@ -42,7 +42,7 @@ public class FoyerServiceTest {
 
     // Test method for addOrUpdate(Foyer f)
     @Test
-    public void testAddOrUpdate() {
+     void testAddOrUpdate() {
         // Arrange
         Foyer foyer = new Foyer();
         foyer.setIdFoyer(1L);
@@ -62,7 +62,7 @@ public class FoyerServiceTest {
 
     // Test method for findById(long id)
     @Test
-    public void testFindById() {
+    void testFindById() {
         // Arrange
         Foyer foyer = new Foyer();
         foyer.setIdFoyer(1L);
@@ -79,7 +79,7 @@ public class FoyerServiceTest {
 
     // Test method for deleteById(long id)
     @Test
-    public void testDeleteById() {
+    void testDeleteById() {
         // Arrange
         long id = 1L;
         doNothing().when(foyerRepository).deleteById(id);
@@ -93,7 +93,7 @@ public class FoyerServiceTest {
 
     // Test method for affecterFoyerAUniversite(long idFoyer, String nomUniversite)
     @Test
-    public void testAffecterFoyerAUniversite() {
+    void testAffecterFoyerAUniversite() {
         // Arrange
         Foyer foyer = new Foyer();
         foyer.setIdFoyer(1L);
@@ -115,7 +115,7 @@ public class FoyerServiceTest {
     }
     // Test method for desaffecterFoyerAUniversite(long idUniversite)
     @Test
-    public void testDesaffecterFoyerAUniversite() {
+     void testDesaffecterFoyerAUniversite() {
         // Arrange
         Universite universite = new Universite();
         universite.setIdUniversite(1L);
@@ -136,7 +136,7 @@ public class FoyerServiceTest {
 
     // Test method for ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite)
     @Test
-    public void testAjouterFoyerEtAffecterAUniversite() {
+    void testAjouterFoyerEtAffecterAUniversite() {
         // Arrange
         Foyer foyer = new Foyer();
         foyer.setIdFoyer(1L);
@@ -165,7 +165,7 @@ public class FoyerServiceTest {
 
     // Test method for ajoutFoyerEtBlocs(Foyer foyer)
     @Test
-    public void testAjoutFoyerEtBlocs() {
+     void testAjoutFoyerEtBlocs() {
         // Arrange
         Foyer foyer = new Foyer();
         Bloc bloc1 = new Bloc();
