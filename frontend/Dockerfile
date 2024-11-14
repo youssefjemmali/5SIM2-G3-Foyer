@@ -1,5 +1,5 @@
 # Stage 1: Build the Angular app
-FROM node:16 AS build
+FROM node:18 AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json
@@ -12,7 +12,7 @@ RUN npm install
 COPY frontend/ .
 
 # Build the Angular app in production mode
-RUN npm run build --prod
+RUN npm run build --configuration=production
 
 # Stage 2: Serve the Angular app using Nginx
 FROM nginx:alpine
