@@ -37,14 +37,7 @@ services:
     stdin_open: true
     tty: true
 
-  frontend:
-    build:
-      context: ./frontend # Adjust the path if the frontend folder is located elsewhere
-      dockerfile: Dockerfile # Ensure there is a Dockerfile in the frontend directory
-    ports:
-      - "3000:80" # Port mapping for frontend (adjust if needed)
-    depends_on:
-      - app-foyer
+  
 
 volumes:
   db:
