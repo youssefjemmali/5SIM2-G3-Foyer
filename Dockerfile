@@ -1,11 +1,11 @@
-# Start with a base image that includes Java (use the version your project requires)
+# Use a lightweight base image with JDK
 FROM openjdk:17-jdk-alpine
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
-# Expose the port your application runs on
-EXPOSE 8080
 
+# Copy the generated JAR file from the target directory
+COPY target/Foyer-0.0.1-SNAPSHOT.jar /Foyer-0.0.1-SNAPSHOT.jar
 
-COPY target/Foyer-0.0.1.jar /Foyer-0.0.1.jar
-ENTRYPOINT ["java", "-jar", "/Foyer-0.0.1.jar"]
+# Command to run the application
+ENTRYPOINT ["java", "-jar", "/Foyer-0.0.1-SNAPSHOT.jar"]
